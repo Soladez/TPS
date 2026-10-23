@@ -2,9 +2,16 @@
 
 Zeigt die Server-TPS (Ticks pro Sekunde) und MSPT (Millisekunden pro Tick) an.
 
-- `/tps`: zeigt TPS (Durchschnitt über 5 s und 1 min) und MSPT im Chat. Funktioniert auch für Spieler ohne die Mod.
-- HUD oben links: zeigt live TPS und MSPT, wenn Server **und** Client die Mod haben (in Einzelspieler immer).
-- `/tpshud`: blendet das HUD clientseitig ein oder aus.
+**Funktioniert auf jedem Server**, auch wenn die Mod dort nicht installiert ist:
+
+- `/tps` (Client): zeigt die Server-TPS im Chat.
+- HUD oben links: zeigt die TPS live.
+- `/tpshud`: blendet das HUD ein oder aus.
+
+Ohne Mod auf dem Server misst der Client die TPS selbst: Vanilla-Server schicken jede Sekunde
+die Spielzeit, daraus ergibt sich, wie viele Ticks pro Sekunde wirklich laufen (Mittel über ca. 10 s).
+Ist die Mod **auch auf dem Server**, kommen genaue Werte inklusive MSPT direkt vom Server.
+Auf dem Server selbst (Konsole) gibt `/tps` zusätzlich den 5-s- und 1-min-Durchschnitt aus.
 
 Farben: grün ≥ 19.5 TPS, gelb ≥ 15, rot darunter. Kommt länger als 3 s kein Update, wird das HUD rot und zeigt „(keine Antwort)“.
 
