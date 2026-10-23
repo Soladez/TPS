@@ -1,0 +1,26 @@
+{
+	"schemaVersion": 1,
+	"id": "tpsmonitor",
+	"version": "${version}",
+	"name": "TPS Monitor",
+	"description": "Zeigt die Server-TPS und MSPT per /tps-Befehl und als HUD-Anzeige.",
+	"authors": [
+		"Kevin Mueller"
+	],
+	"license": "CC0-1.0",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.tpsmonitor.TpsMonitor"
+		],
+		"client": [
+			"dev.tpsmonitor.client.TpsMonitorClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
